@@ -20,7 +20,9 @@ const App : FC<{}> = ()=>{
     };
 
     const disableNotification = () =>{
-        setBackgroundColor("#ffffff");
+        if(color !== '#ffffff') {
+            setBackgroundColor("#ffffff");
+        }
     }
     return (
         <div className="wrapper" style={{background : color}} onTransitionEnd={disableNotification}>
