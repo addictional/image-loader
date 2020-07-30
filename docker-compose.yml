@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    build: ./frontend
+    ports:
+      - "8080:80" 
+    depends_on: 
+      - backend
+    command: bash -c "nginx && tail -f /dev/null"
+  backend:
+    image : node:12
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app
+    working_dir: /app  
+    command: bash -c "yarn && yarn run start && tail -f /dev/null"    

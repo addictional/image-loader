@@ -1,0 +1,14 @@
+.wrapper {
+  height: 100vh;
+  transition: background 0.3s ease;
+}
+.content {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
