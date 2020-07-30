@@ -57,8 +57,7 @@ describe('app',()=>{
   it('should reset background color after transition end', () => {
     const app = mount(<App />);
     app.find('input').simulate('change',files);
-    app.find('input').simulate('transitionEnd');
-    app.find('input').simulate('transitionEnd');
+    app.find('.wrapper').simulate('transitionEnd');
     expect(app.find('.wrapper').getElement().props.style.background).toEqual('#ffffff')
   });
 })
